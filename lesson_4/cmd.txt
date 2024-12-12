@@ -1,0 +1,351 @@
+    1  passwd
+    2  ping www.google.com
+    3  ls
+    4  pwd
+    5  ls
+    6  ll
+    7  ls
+    8  pwd
+    9  vim test.cpp
+   10  ls
+   11  vim test.cpp 
+   12  g++ test.cpp
+   13  sudo yum update -y
+   14  g++ --version
+   15  g++ test.cpp 
+   16  vim test.cpp 
+   17  g++ test.cpp 
+   18  ./a.out 
+   19  objdum -S a.out
+   20  objdump -S a.out
+   21  vim test.cpp 
+   22  g++ test.cpp 
+   23  ls
+   24  rm -r a.out 
+   25  vim test.cpp 
+   26  g++ test.cpp 
+   27  vim test.cpp 
+   28  g++ test.cpp 
+   29  vim test.cpp 
+   30  g++ test.cpp 
+   31  g++ test.cpp -std=c++11
+   32  ./a.out 
+   33  vim test.cpp 
+   34  g++ test.cpp -std=c++11
+   35  ./a.out 
+   36  ls
+   37  ls
+   38  vim test.cpp
+   39  rm -r a.out 
+   40  vim test1.cpp
+   41  ls
+   42  clear
+   43  ls
+   44  g++ test1.cpp 
+   45  vim test1.cpp
+   46  g++ test1.cpp 
+   47  ./a.out 
+   48  ls
+   49  vim test1.cpp 
+   50  g++ test.cpp 
+   51  g++ test1.cpp 
+   52  vim test1.cpp 
+   53  g++ test1.cpp 
+   54  vim test1.cpp 
+   55  g++ test1.cpp 
+   56  ./a.out 
+   57  vim test1.cpp 
+   58  g++ test1.cpp 
+   59  ./a.out 
+   60  rm a.out 
+   61  g++ test1.cpp std=c++11
+   62  g++ test1.cpp -std=c++11
+   63  ./a.out 
+   64  vim test1.cpp 
+   65  g++ test1.cpp -std=c++11
+   66  ./a.out 
+   67  ls
+   68  vim test2.cpp
+   69  rm test2.cpp 
+   70  vim test2.cpp
+   71  g++ test2.cpp 
+   72  ./a.out 
+   73  ls
+   74  vim test3.cpp
+   75  g++ test3.cpp 
+   76  ./a.out 
+   77  clear
+   78  vim test3.cpp 
+   79  g++ test3.cpp 
+   80  ./a.out 
+   81  ls
+   82  vim test3.cpp 
+   83  g++ test3.cpp 
+   84  ./a.out 
+   85  vim test3.cpp 
+   86  g++ test3.cpp 
+   87  ./a.out 
+   88  ls
+   89  vim test4.cpp
+   90  g++ test4.cpp 
+   91  vim test4.cpp
+   92  g++ test4.cpp 
+   93  ./a.out 
+   94  ls
+   95  vim test5.cpp
+   96  g++ test5.cpp 
+   97  vim test5.cpp
+   98  g++ test5.cpp 
+   99  ./a.out 
+  100  vim test5.cpp
+  101  ./a.out 
+  102  g++ test5.cpp 
+  103  ./a.out 
+  104  ls
+  105  vim test6.cpp
+  106  g++ test6.cpp 
+  107  vim test6.cpp
+  108  g++ test6.cpp 
+  109  ./a.out 
+  110  vim test6.cpp 
+  111  g++ test6.cpp 
+  112  ./a.out 
+  113  ls
+  114  vim test7.cpp
+  115  rm test7.cpp 
+  116  vim test7.cpp
+  117  g++ test7.cpp 
+  118  vim test7.cpp 
+  119  g++ test7.cpp 
+  120  vim test7.cpp 
+  121  g++ test7.cpp 
+  122  vim test7.cpp 
+  123  g++ test7.cpp 
+  124  g++ test7.cpp -std=c++11
+  125  ./a.out 
+  126  ip addr
+  127  ls
+  128  mkdir test
+  129  cd test/
+  130  ls
+  131  vim main.cpp
+  132  vim lish.h
+  133  rm lish.h 
+  134  vim lish.h
+  135  g++ main.cpp -std:c++11
+  136  g++ main.cpp -std=c++11
+  137  pwd
+  138  vim main.cpp
+  139  g++ main.cpp -std=c++11
+  140  pwd
+  141  ls /home/joey/test/lish.h 
+  142  g++ -I /home/joey/test/ my_program.cpp -o my_program
+  143  g++ -I /home/joey/test/ main.cpp 
+  144  vim main.cpp
+  145  g++ -I /home/joey/test/ main.cpp 
+  146  g++ -I /home/joey/test main.cpp 
+  147  ls
+  148  mv lish.h list.h
+  149  ls
+  150  g++ main.cpp 
+  151  vim list.h 
+  152  g++ main.cpp 
+  153  vim list.h 
+  154  g++ main.cpp -std=c++11
+  155  vim list.h 
+  156  g++ main.cpp -std=c++11
+  157  valgrind
+  158  wget https://sourceware.org/pub/valgrind/valgrind-3.16.1.tar.bz2
+  159  tar -jxvf valgrind-3.16.1.tar.bz2
+  160  cd valgrind-3.16.1
+  161  ./configure
+  162  make
+  163  make install
+  164  sudo make install
+  165  make
+  166  ls
+  167  valgrind
+  168  ls
+  169  cd test/
+  170  ls
+  171  valgrind ./a.out 
+  172  rm -rf valgrind-3.16.1
+  173  ls
+  174  rm -rf valgrind-3.16.1.tar.bz2 
+  175  ls
+  176  valgrind ./a.out 
+  177  vim list.h 
+  178  g++ main.cpp -std=c++11
+  179  valgrind ./a.out 
+  180  vim list.h 
+  181  ls
+  182  vim test8.cpp
+  183  gcc test8.cpp 
+  184  vim test8.cpp 
+  185  g++ test8.cpp 
+  186  vim test8.cpp 
+  187  g++ test8.cpp 
+  188  ./a.out 
+  189  g++ -m32 test8.cpp 
+  190  g++ -m32 test8.cpp -o test.out
+  191  ls
+  192  g++ -m32 test8.cpp -o test.out
+  193  g++ test8.cpp -🐑2 -o test.out
+  194  g++ test8.cpp m32 -o test.out
+  195  ls
+  196  g++ test8.cpp m32 -o test.out
+  197  yum install -y libstdc++-devel.i686
+  198  g++ test8.cpp m32 -o test.out
+  199  g++ test8.cpp -m32 -o test.out
+  200  sudo dnf install glibc-devel.i686 libstdc++-devel.i686
+  201  g++ test8.cpp -m32 -o test.out
+  202  g++ -m32 test8.cpp  -o test.out
+  203  ls
+  204  vim
+  205  cd test
+  206  ls
+  207  cd ..
+  208  mkdir BSTree
+  209  cd BSTree/
+  210  ls
+  211  vim BS.cpp
+  212  vim BinarySearchTree.h
+  213  g++ BS.cpp std=c++11
+  214  g++ BS.cpp =std11
+  215  g++ BS.cpp -std=c++11
+  216  ./a.out 
+  217  valgrind a.out 
+  218  valgrind ./a.out 
+  219  vim BinarySearchTree.h 
+  220  g++ BS.cpp -std=c++11
+  221  valgrind ./a.out 
+  222  ls
+  223  ls
+  224  touch test9.cpp
+  225  ls
+  226  vim test9.cpp 
+  227  g++ -std=c++11 -o test9 tese9.cpp
+  228  g++ -std=c++11 -o test9 test9.cpp
+  229  ./test9 
+  230  ls -l test
+  231  ls -d test
+  232  ls -dl test
+  233  ls -l /
+  234  ls
+  235  pwd
+  236  ls -l /home
+  237  ls
+  238  who am i
+  239  whoami
+  240  ls
+  241  tree test
+  242  mkdir dr1
+  243  ls
+  244  mv test* dr1
+  245  ls
+  246  mkdir Linux_108
+  247  ls
+  248  cd Linux_108/
+  249  mkdir lesson_4
+  250  ls
+  251  date
+  252  date +%s
+  253  cal
+  254  cal -3
+  255  cal 2023
+  256  cal 2024
+  257  cal 1949
+  258  find ~ *.c 
+  259  find ~ -name -c
+  260  find ~ -name *.c
+  261  find ~ -name *.cpp
+  262  whereis stdlib.h
+  263  which stdlib.h
+  264  which which
+  265  cnt=0; while [ $cnt -le 100000 ]; do echo "hello bit $cnt"; done 
+  266  cnt=0; while [ $cnt -le 100000 ]; do echo "hello bit $cnt"; let cnt++; done 
+  267  cnt=0; while [ $cnt -le 100000 ]; do echo "hello bit $cnt"; let cnt++; done > log.txt
+  268  ls
+  269  grep "999" log.txt 
+  270  grep "1234" log.txt 
+  271  grep "9999" log.txt 
+  272  >log.txt 
+  273  cat log.txt 
+  274  nano log.txt 
+  275  cat log.txt 
+  276  ls
+  277  mv log.txt lesson_4/
+  278  ls
+  279  cd lesson_4/
+  280  ls
+  281  cat log.txt 
+  282  grep "world" log.txt 
+  283  grep -v "world" log.txt 
+  284  grep -n "world" log.txt 
+  285  grep -nv "world" log.txt 
+  286  ls ~
+  287  ls -d ~
+  288  grep -Rn "int main()" ~
+  289  ps ajx | grep sshd
+  290  ls
+  291  cat log.txt 
+  292  mkdir -p d1/d2/d3
+  293  ls
+  294  cd d1
+  295  ls
+  296  touch file1.txt file2.txt file3.txt
+  297  ls
+  298  cd d2
+  299  ls
+  300  touch file4.txt file5.txt
+  301  ls
+  302  echo "hello world" > file4.txt
+  303  ls
+  304  cat file4.txt 
+  305  cd ..
+  306  cd..
+  307  cd ..
+  308  ls
+  309  pwd
+  310  tree d1
+  311  zip -r d1.zip d1
+  312  ls
+  313  mv d1.zip ../
+  314  ls
+  315  cd ..
+  316  ;s
+  317  ls
+  318  unzip d1.zip 
+  319  ls
+  320  tree d1
+  321  cat d1/d2/file4.txt 
+  322  rm -rf d1*
+  323  ls
+  324  cd lesson_4/
+  325  ls
+  326  zip
+  327  zip -- help
+  328  zip --help
+  329   tar
+  330  tar --version
+  331   bc
+  332  clear
+  333  uname
+  334  uname -r
+  335  uname -a
+  336  uname -r
+  337  free
+  338  free -m
+  339  free -g
+  340  df -h
+  341  lscpu
+  342  lsmem
+  343  clear
+  344  nano --version
+  345  history
+  346  ls
+  347  cd Linux_108/
+  348  ls
+  349  cd lesson_4/
+  350  ls
+  351  history > cmd.txt

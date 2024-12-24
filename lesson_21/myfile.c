@@ -5,15 +5,30 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 
+#define filename "log.txt"
 
 int main()
 {
-    close(1);
-    int n = printf("stdin->fd: %d\n", stdin->_fileno);
-    printf("stdout->fd: %d\n", stdout->_fileno);
+    fprintf(stdout, "hello normal message\n");
+    fprintf(stdout, "hello normal message\n");
+    fprintf(stdout, "hello normal message\n");
+    fprintf(stdout, "hello normal message\n");
+    fprintf(stdout, "hello normal message\n");
+
+
+    fprintf(stderr, "hello error message\n");
+    fprintf(stderr, "hello error message\n");
+    fprintf(stderr, "hello error message\n");
+    fprintf(stderr, "hello error message\n");
+    fprintf(stderr, "hello error message\n");
 
     
-    fprintf(stderr, "printf ret: %d\n", n);
+    //close(1);
+    //int n = printf("stdin->fd: %d\n", stdin->_fileno);
+    //printf("stdout->fd: %d\n", stdout->_fileno);
+//
+    //
+    //fprintf(stderr, "printf ret: %d\n", n);
 
 
 

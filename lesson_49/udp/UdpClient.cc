@@ -7,6 +7,7 @@
 #include <netinet/in.h>
 #include <arpa/inet.h>
 #include <pthread.h>
+#include "Terminal.cc"
 
 using namespace std;
 
@@ -19,13 +20,15 @@ struct ThreadData
 {
     struct sockaddr_in server;
     int sockfd;
+    std::string serverip;
 };
 
 
 void* recv_message(void* args)
 {
+    // OpenTerminal();
     ThreadData* td = static_cast<ThreadData*>(args);
-    char buffer[1024];
+    char buffer[1024] = {0};
     while(true)
     {
         struct sockaddr_in temp;
@@ -35,7 +38,7 @@ void* recv_message(void* args)
         if (s > 0)
         {
             buffer[s] = 0;
-            cout << buffer << endl;
+            cerr << buffer << endl;
         }
     }
 }
@@ -45,6 +48,11 @@ void* send_message(void* args)
     ThreadData* td = static_cast<ThreadData*>(args);
     string message;
     socklen_t len = sizeof(td->server);
+
+    std::string welcome = td->serverip; 
+    welcome += " coming...";
+    sendto(td->sockfd, welcome.c_str(), welcome.size(), 0, (struct sockaddr*)&(td->server), len);
+
     while(true)
     {
 
@@ -82,6 +90,8 @@ int main(int argc, char* argv[])
         cout << "socket error" << endl;
         return 1;
     }
+
+    td.serverip = serverip; 
 
     pthread_t recvr, sender;
     pthread_create(&recvr, nullptr, recv_message, &(td));

@@ -102,7 +102,7 @@ public:
             socklen_t len = sizeof(client);
             ssize_t n = recvfrom(sockfd_, inbuffer, sizeof(inbuffer) - 1, 0, (struct sockaddr*)&client, &len);
             if (n < 0)
-            {
+            { 
                 lg(Warning, "recvfrom error, errno: %d, err string: %s", errno, strerror(errno));
                 continue;
             }

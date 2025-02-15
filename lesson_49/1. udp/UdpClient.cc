@@ -31,6 +31,7 @@ void* recv_message(void* args)
     char buffer[1024] = {0};
     while(true)
     {
+        memset(buffer, 0, sizeof(buffer));
         struct sockaddr_in temp;
         socklen_t len = sizeof(temp);
 

@@ -59,12 +59,7 @@ private:
         return "None";
     }
 public:
-    ThreadPool(int num = defaultnum)
-        : threads_(num)
-    {
-        pthread_mutex_init(&mutex_, nullptr);
-        pthread_cond_init(&cond_, nullptr);
-    }
+
 
     static void* HandlerTask(void* args)
     {
@@ -111,6 +106,32 @@ public:
 
     }
 
+    static ThreadPool<T>* GetInstance()
+    {
+        if (nullptr == tp_)
+        {
+            pthread_mutex_lock(&lock_);
+            if (nullptr == tp_)
+            {
+                std::cout << "log: singleton create done first!" << std::endl;
+                tp_ = new ThreadPool<T>();
+            }
+            pthread_mutex_unlock(&lock_);
+        }
+        return tp_;
+    }
+
+private:
+    ThreadPool(int num = defaultnum)
+    : threads_(num)
+    {
+    pthread_mutex_init(&mutex_, nullptr);
+    pthread_cond_init(&cond_, nullptr);
+    }
+
+    ThreadPool(const ThreadPool<T>&) = delete;
+    const ThreadPool<T>& operator=(const ThreadPool<T>&) = delete;
+
     ~ThreadPool()
     {
         pthread_mutex_destroy(&mutex_);
@@ -121,4 +142,13 @@ private:
     std::queue<T> tasks_;
     pthread_mutex_t mutex_;
     pthread_cond_t cond_;
+
+    static ThreadPool<T> *tp_; 
+    static pthread_mutex_t lock_;
 };
+
+template<class T>
+ThreadPool<T>* ThreadPool<T>::tp_; 
+
+template<class T>
+pthread_mutex_t ThreadPool<T>::lock_ = PTHREAD_MUTEX_INITIALIZER; 

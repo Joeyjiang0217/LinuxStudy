@@ -4,11 +4,15 @@
 #include "ThreadPool.hpp"
 #include "Task.hpp"
 
+pthread_spinlock_t slock; 
 
 int main()
 {
-    ThreadPool<Task>* tp = new ThreadPool<Task>(5);
-    tp->Start();
+    // pthread_spin_init()
+    std::cout << "process running..." << std::endl;
+    sleep(3);
+    // ThreadPool<Task>* tp = new ThreadPool<Task>(5);
+    ThreadPool<Task>::GetInstance()->Start();
 
     srand(time(nullptr) ^ getpid());
     while (true)
@@ -20,7 +24,7 @@ int main()
         char op = opers[rand() % opers.size()];
 
         Task t(x, y, op);
-        tp->Push(t);
+        ThreadPool<Task>::GetInstance()->Push(t);
         // 2. hand tasks to the ThreadPool
 
         std::cout << "Main thread made a task: " << t.GetTask() << std::endl;

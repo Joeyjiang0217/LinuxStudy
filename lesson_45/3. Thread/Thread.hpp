@@ -5,29 +5,68 @@
 #include <ctime>
 #include <pthread.h>
 
+typedef void (*callback_t)();
+static int num = 1;
 
 class Thread
 {
 public:
-    Thread()
+    static void* Routine(void* args)
+    {
+        Thread* thread = static_cast<Thread*>(args);
+        thread->Entry();
+        return nullptr;
+    }
+
+public:
+    Thread(callback_t cb)
+        :tid_(0), name_(""), start_timestamp_(0), isrunning_(false), cb_(cb)
     {
 
     }
 
-    void  Run();
-    void Join();
+    void Run()
+    {
+        name_ = "thread-" + std::to_string(num++);
+        start_timestamp_ = time(nullptr);
+        isrunning_ = true;
+        pthread_create(&tid_, nullptr, Routine, this);
+    }
 
-    std::string Name();
-    uint64_t StartTimestamp();
-    bool IsRunning();
+    void Join()
+    {
+        pthread_join(tid_, nullptr);
+        isrunning_ = false;
+    }
+
+    std::string Name()
+    {
+        return name_;
+    }
+
+    uint64_t StartTimestamp()
+    {
+        return start_timestamp_;
+    }
+
+    bool IsRunning()
+    {
+        return isrunning_;
+    }
+
+    void Entry()
+    {
+        cb_();
+    }
 
     ~Thread()
     {
 
     }
 private:
-    pthread_t tid;
-    std::string name;
-    uint64_t start_timestamp;
-    bool isrunning;
+    pthread_t tid_;
+    std::string name_;
+    uint64_t start_timestamp_;
+    bool isrunning_;
+    callback_t cb_;
 };

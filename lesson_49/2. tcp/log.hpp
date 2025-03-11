@@ -149,6 +149,8 @@ private:
     std::string path;
 };
 
+Log lg;
+
 // int sum(int n, ...)
 // {
 //     va_list s;

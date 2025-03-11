@@ -17,7 +17,7 @@ int main(int argc, char* argv[])
     }
 
     uint16_t port = std::stoi(argv[1]);
-
+    lg.Enable(Classfile);
     std::unique_ptr<TcpServer> tcp_svr(new TcpServer(port));
     tcp_svr->InitServer();
     tcp_svr->Start();

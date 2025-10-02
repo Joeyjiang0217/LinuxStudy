@@ -1,0 +1,36 @@
+
+
+# Allow source files
+!*.c
+!*.cc
+!*.cpp
+!*.h
+!*.hpp
+
+# Allow CMake configuration
+!CMakeLists.txt
+
+# Ignore build directory
+/build/
+
+# Ignore common CMake/Make build files
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# Ignore object files and binaries
+*.o
+*.a
+*.so
+*.out
+*.exe
+*.dll
+
+# Ignore logs
+*.log
+
+# Ignore IDE/editor configs
+.vscode/
+.idea/
+*.swp
